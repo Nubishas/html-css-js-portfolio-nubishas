@@ -1,0 +1,561 @@
+/* GENERAL */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,600;1,700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+    font-family: "Popins",sans-serif ;
+
+
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+p{
+    color: rgb(85, 85, 85);
+}
+
+.letter {
+    position: fixed;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+#letterN {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#letterS {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.transformed {
+    font-size: 200px;
+    top: 60%;
+    transform: translateY(-60%);
+}
+
+/* prealoader STYLE */
+
+.prealoader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+
+}
+
+.loaded .prealoader {
+    opacity: 0;
+}
+
+.spinner {
+    width: flex;
+    height: flex;
+    animation: spin 30s linear infinite ;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+ 
+/* TRANSITION */
+
+a,
+.btn {
+    transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+    display: flex;
+}
+
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+
+}
+
+.logo{
+    font-size: 2.5rem;
+}
+.logo:hover{
+    cursor: default;
+}
+
+/* SECTIONS */
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+}
+
+/* PROFILE SECTION */
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+.profile-photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto; /* Set width to auto */
+    height: auto; /* Set height to auto */
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    max-height: 100%; /* Ensure the image does not exceed the container height */
+    object-fit: cover; /* Ensure the entire image is visible without distortion */
+}
+
+
+.section__text{
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text__p1{
+    text-align: center;
+}
+.section__text__p2{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+
+}
+
+#social-container 
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 3rem;
+    
+   
+}
+
+.icon:hover {
+    transform: scale(1.9); /* Scale element by 10% */
+}
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* BUTTON */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease-in;
+    padding: 1rem;
+    border-radius: 2rem;
+    
+}
+
+.btn-color-1,
+.btn-color-2{
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover{
+    background: rgb(53, 53, 53);
+    color: white
+}
+
+.btn-color-1:hover {
+    background-color: rgb(0, 0, 0);
+}
+.btn-color-2:hover {
+    border: rgb(255, 255, 255) 0.rem solid;
+}
+
+.btn-container{
+    gap:1rem;
+}
+
+
+
+
+
+
+/* CONTACT */
+
+#contact {
+    display: flex;
+
+    justify-content: end;
+    flex-direction: column;
+    height: 5%;
+}
+
+.contact-info-upper-container{
+    display: flex;
+    align-content: baseline;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+.contact-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+
+}
+
+.contact-info-container p {
+    font-size: larger;
+}
+
+.contact-icon{
+    cursor: default;
+
+}
+.email-icon {
+    height:  5rem;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.banner {
+    background-color: #f0f0f0;
+    padding: 40px;
+}
+
+.moving-text {
+    animation: moveText 18s linear infinite;
+    font-size: 40px; /* Adjust font size as needed */
+    white-space: nowrap;
+}
+
+.logos {
+    margin-top: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+   
+}
+
+.logos img {
+    height: 50px;
+    margin-right: 10%;
+    display: inline-block;
+    animation: moveLogos 3s linear infinite ; /* Reverse the animation direction */
+   
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+
+
+.projects {
+    position: relative;
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Snap to each project */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    margin-top: 5%; /* Adjust spacing */
+    flex-direction: column; /* Align projects in a row */
+    margin-bottom: 5%;
+
+    flex-wrap: wrap;
+    justify-content: center;
+   
+    
+}
+
+
+
+
+
+.project {
+    position: relative;
+    width: 90%; /* Adjust project card width */
+    height: 70%; /* Adjust project card height */
+    border-radius: 40px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    
+}
+
+.project:hover .project-details {
+    transform: translateY(-100%); /* Move details into view on hover */
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure image covers the entire container */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.project:hover .project-image {
+    transform: scale(1.1); /* Scale up image on hover */
+}
+
+.project-details {
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 10px;
+    color: #fff;
+    transform: translateY(100%); /* Initially move details out of view */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.project-details h3 {
+    margin: 0;
+    font-size: 30px;
+    
+}
+
+.section_text_p1{
+    text-align: center;
+    margin-top: 30px;
+}
+ 
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+/* Existing styles */
+
+.cube {
+    width: 300px; /* Increased size */
+    height: 300px; /* Increased size */
+    position: relative;
+    margin: 15% auto; /* Moved lower */
+    transform-style: preserve-3d;
+    animation: rotateCube 3.5s infinite linear;
+    
+  }
+  
+  .side {
+    position: absolute;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden; /* Hide the backfaces of the sides */
+
+    border: 2px solid black; /* Black border around sides */
+    box-sizing: border-box; /* Include border in width and height calculations */
+  }
+  
+  .side img {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Maintain aspect ratio and cover entire side */
+  }
+  
+  .front { transform: translateZ(150px); }
+  .back { transform: rotateY(180deg) translateZ(150px); }
+  .top { transform: rotateX(90deg) translateZ(150px); }
+  .bottom { transform: rotateX(-90deg) translateZ(150px); }
+  .left { transform: rotateY(-90deg) translateZ(150px); }
+  .right { transform: rotateY(90deg) translateZ(150px); }
+  
+  @keyframes rotateCube {
+    from { transform: rotate3d(1, 1, 1, 0deg); }
+    to { transform: rotate3d(1, 1, 1, 360deg); }
+  }
+
+  /* Existing styles */
+
+.cube {
+    /* Existing styles */
+    transition: transform 0.5s ease; /* Add transition for smoother rotation change */
+  }
+  
+  /* Other styles... */
+  
+  .cube:hover {
+    animation-duration: 7s; /* Increase the rotation duration when hovered */
+  }
+  
+  
+
+  .section_banner_p1{
+    text-align: center;
+  }
+.section_cube_p1{
+    text-align: center;
+}
+
+
+/* Existing styles */
+
+/* Contact button styles */
+.contact-button {
+    position: fixed; /* Fixed positioning */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    padding: 10px 20px;
+    background-color: #333; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none; /* Remove default link underline */
+    border-radius: 55px; /* Rounded corners */
+    z-index: 999;
+  }
+  
+  /* Other styles... */
+  
+  /* Existing styles */
+
+
+
+
+  .profile-section {
+    height: 400px;
+    width: 400px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.parallax-container {
+    height: 100%;
+    background-color: #f0f0f0; /* Background color */
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 200%; /* Adjust the height for the desired parallax effect */
+}
+
+
+
+
+
+
