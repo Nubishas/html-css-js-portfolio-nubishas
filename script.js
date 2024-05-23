@@ -18,7 +18,7 @@ function scrollFunction() {
     var letterS = document.getElementById("letterS");
     var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
     var pageHeight = document.body.offsetHeight;
-    var scrollThreshold = pageHeight * 0.79; // Adjust the value as needed
+    var scrollThreshold = pageHeight * 0.93; // Adjust the value as needed
 
     if (scrollPos >= scrollThreshold) {
         letterN.innerHTML = "NUBI";
